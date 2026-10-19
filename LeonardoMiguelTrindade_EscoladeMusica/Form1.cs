@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LeonardoMiguelTrindade_EscoladeMusica
 {
@@ -19,7 +20,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Conexao.GetConexao();
         }
     }
 }
