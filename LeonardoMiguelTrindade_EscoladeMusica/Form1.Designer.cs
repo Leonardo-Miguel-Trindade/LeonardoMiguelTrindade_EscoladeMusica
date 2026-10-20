@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CadastrarAulas = new System.Windows.Forms.Button();
+            this.CadastrarAluno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,31 +43,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Escola de Música";
             // 
-            // button1
+            // CadastrarAulas
             // 
-            this.button1.Location = new System.Drawing.Point(46, 566);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 100);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cadastrar Aluno";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CadastrarAulas.Location = new System.Drawing.Point(46, 566);
+            this.CadastrarAulas.Name = "CadastrarAulas";
+            this.CadastrarAulas.Size = new System.Drawing.Size(274, 100);
+            this.CadastrarAulas.TabIndex = 1;
+            this.CadastrarAulas.Text = "Cadastrar Aulas";
+            this.CadastrarAulas.UseVisualStyleBackColor = true;
+            this.CadastrarAulas.Click += new System.EventHandler(this.CadastrarAulas_Click);
             // 
-            // button2
+            // CadastrarAluno
             // 
-            this.button2.Location = new System.Drawing.Point(388, 566);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(274, 100);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cadastrar Aluno";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CadastrarAluno.Location = new System.Drawing.Point(388, 566);
+            this.CadastrarAluno.Name = "CadastrarAluno";
+            this.CadastrarAluno.Size = new System.Drawing.Size(274, 100);
+            this.CadastrarAluno.TabIndex = 2;
+            this.CadastrarAluno.Text = "Cadastrar Aluno";
+            this.CadastrarAluno.UseVisualStyleBackColor = true;
+            this.CadastrarAluno.Click += new System.EventHandler(this.CadastrarAluno_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1473, 702);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CadastrarAluno);
+            this.Controls.Add(this.CadastrarAulas);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -80,8 +82,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CadastrarAulas;
+        private System.Windows.Forms.Button CadastrarAluno;
     }
 }
 

@@ -21,6 +21,22 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         private void Form1_Load(object sender, EventArgs e)
         {
             Conexao.GetConexao();
+            Conexao.CreateDB();
+            Conexao.CreateTables();
+        }
+
+        private void CadastrarAulas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formCadastrarAulas = new Cadastrar_Aula();
+            formCadastrarAulas.Show();
+        }
+
+        private void CadastrarAluno_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formCadastrarAluno = new Cadastrar_Aluno();
+            formCadastrarAluno.Show();
         }
     }
 }
