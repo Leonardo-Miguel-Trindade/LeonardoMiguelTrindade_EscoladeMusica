@@ -113,6 +113,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cadastrar Aluno.resx">
+      <DependentUpon>Cadastrar Aluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastrar Aula.resx">
       <DependentUpon>Cadastrar Aula.cs</DependentUpon>
     </EmbeddedResource>

@@ -21,7 +21,6 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             {
                 string strconexao = "server=localhost;port=3306;user id=escola_app;password=;database=escola_de_musica";
                 conexao = new MySqlConnection(strconexao);
-                MessageBox.Show("Conexão com o banco de dados estabelecida com sucesso!");
                 conexao.Open();
             }
             catch (Exception ex)
@@ -40,7 +39,6 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             {
                 command = new MySqlCommand("CREATE DATABASE IF NOT EXISTS escola_de_musica", GetConexao());
                 command.ExecuteNonQuery();
-                MessageBox.Show("Banco de dados 'escola_de_musica' criado com sucesso!");
 
                 GetConexao().Close();
             }
@@ -52,22 +50,22 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             return command;
         }
 
+        //Este método cria as tabelas "alunos" e "aulas" no banco de dados "escola_de_musica" caso elas não existam.
         public static MySqlCommand CreateTables()
         {
             var command = new MySqlCommand();
             try
             {
                 command = new MySqlCommand("CREATE TABLE IF NOT EXISTS alunos (\r\n    matricula INT NOT NULL,\r\n  " +
-                                           "  nome VARCHAR(50) NOT NULL,\r\n    endereco VARCHAR(50) NOT NULL,\r\n " +
+                                           "  nome VARCHAR(50) NOT NULL,\r\n    endereco VARCHAR(100) NOT NULL,\r\n " +
                                            "   cpf VARCHAR(14) NOT NULL,\r\n    telefone VARCHAR(15) NOT NULL,\r\n  " +
                                            "  instrumento VARCHAR(20) NOT NULL,\r\n    PRIMARY KEY (matricula)\r\n);", GetConexao());
                 command.ExecuteNonQuery();
                 GetConexao().Close();
-                MessageBox.Show("Tabela 'alunos' criada com sucesso!"); 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao criar a tabela: " + ex.Message);
+                MessageBox.Show("Erro ao criar a tabela 'alunos': " + ex.Message);
             }
 
             try
@@ -77,11 +75,74 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                     "   professor VARCHAR(50) NOT NULL,\r\n    PRIMARY KEY (id)\r\n);", GetConexao());
                 command.ExecuteNonQuery();
                 GetConexao().Close();
-                MessageBox.Show("Tabela 'aulas' criada com sucesso!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao criar a tabela: " + ex.Message);
+                MessageBox.Show("Erro ao criar a tabela 'aulas': " + ex.Message);
+            }
+
+            return command;
+        }
+
+        public static MySqlCommand CadastroAula(string instrumento, string dia, string professor)
+        {
+            var command = new MySqlCommand();
+            try
+            {
+                GetConexao();
+
+                try
+                {
+                    command = new MySqlCommand("INSERT INTO aulas (instrumento, dia, professor) VALUES (@instrumento, @dia, @professor)", GetConexao());
+                    command.Parameters.AddWithValue("@instrumento", instrumento);
+                    command.Parameters.AddWithValue("@dia", dia);
+                    command.Parameters.AddWithValue("@professor", professor);
+                    command.ExecuteNonQuery();
+                    GetConexao().Close();
+                    MessageBox.Show("Aula cadastrada com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao cadastrar a aula: " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
+            }
+            
+            return command;
+        }
+
+        public static MySqlCommand CadastroAluno(int matricula, string nome, string endereco, string cpf, string telefone, string instumento)
+        {
+            var command = new MySqlCommand();
+            try
+            {
+                GetConexao();
+
+                try
+                {
+                    command = new MySqlCommand("INSERT INTO alunos (matricula, nome, endereco, cpf, telefone, instrumento) " +
+                        "VALUES (@matricula, @nome, @endereco, @cpf, @telefone, @instrumento)", GetConexao());
+                    command.Parameters.AddWithValue("@matricula", matricula);
+                    command.Parameters.AddWithValue("@nome", nome);
+                    command.Parameters.AddWithValue("@endereco", endereco);
+                    command.Parameters.AddWithValue("@cpf", cpf);
+                    command.Parameters.AddWithValue("@telefone", telefone);
+                    command.Parameters.AddWithValue("@instrumento", instumento);
+                    command.ExecuteNonQuery();
+                    GetConexao().Close();
+                    MessageBox.Show("Aluno cadastrado com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao cadastrar o aluno: " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
             }
 
             return command;

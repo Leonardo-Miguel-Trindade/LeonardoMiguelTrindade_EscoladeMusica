@@ -9,7 +9,7 @@ USE escola_de_musica;
 CREATE TABLE IF NOT EXISTS alunos (
     matricula INT NOT NULL,
     nome VARCHAR(50) NOT NULL,
-    endereco VARCHAR(50) NOT NULL,
+    endereco VARCHAR(100) NOT NULL,
     cpf VARCHAR(14) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
     instrumento VARCHAR(20) NOT NULL,
