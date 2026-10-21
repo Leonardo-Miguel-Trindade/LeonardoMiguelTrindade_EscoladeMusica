@@ -14,12 +14,12 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
     internal class Conexao
     {
         //Este método retorna uma conexão aberta com o banco de dados MySQL.
-        public static MySqlConnection GetConexao()
+        public static MySqlConnection GetConexao(string str)
         {
             var conexao = (MySqlConnection)null;
             try
             {
-                string strconexao = "server=localhost;port=3306;user id=escola_app;password=;database=escola_de_musica";
+                string strconexao = str;
                 conexao = new MySqlConnection(strconexao);
                 conexao.Open();
             }
@@ -37,10 +37,10 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             var command = new MySqlCommand();
             try
             {
-                command = new MySqlCommand("CREATE DATABASE IF NOT EXISTS escola_de_musica", GetConexao());
+                command = new MySqlCommand("CREATE DATABASE IF NOT EXISTS escola_de_musica", GetConexao("server=localhost; user=root; password="));
                 command.ExecuteNonQuery();
 
-                GetConexao().Close();
+                GetConexao("server=localhost; user=root; password=").Close();
             }
             catch (Exception ex)
             {
@@ -59,9 +59,9 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                 command = new MySqlCommand("CREATE TABLE IF NOT EXISTS alunos (\r\n    matricula INT NOT NULL,\r\n  " +
                                            "  nome VARCHAR(50) NOT NULL,\r\n    endereco VARCHAR(100) NOT NULL,\r\n " +
                                            "   cpf VARCHAR(14) NOT NULL,\r\n    telefone VARCHAR(15) NOT NULL,\r\n  " +
-                                           "  instrumento VARCHAR(20) NOT NULL,\r\n    PRIMARY KEY (matricula)\r\n);", GetConexao());
+                                           "  instrumento VARCHAR(20) NOT NULL,\r\n    PRIMARY KEY (matricula)\r\n);", GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
                 command.ExecuteNonQuery();
-                GetConexao().Close();
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica").Close();
             }
             catch (Exception ex)
             {
@@ -72,9 +72,9 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             {
                 command = new MySqlCommand("CREATE TABLE IF NOT EXISTS aulas (\r\n    id INT NOT NULL AUTO_INCREMENT,\r\n " +
                     "   instrumento VARCHAR(20) NOT NULL,\r\n    dia ENUM('SEGUNDA', 'TERCA', 'QUARTA', 'QUINTA', 'SEXTA') NOT NULL,\r\n " +
-                    "   professor VARCHAR(50) NOT NULL,\r\n    PRIMARY KEY (id)\r\n);", GetConexao());
+                    "   professor VARCHAR(50) NOT NULL,\r\n    PRIMARY KEY (id)\r\n);", GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
                 command.ExecuteNonQuery();
-                GetConexao().Close();
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica").Close();
             }
             catch (Exception ex)
             {
@@ -89,16 +89,16 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             var command = new MySqlCommand();
             try
             {
-                GetConexao();
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
 
                 try
                 {
-                    command = new MySqlCommand("INSERT INTO aulas (instrumento, dia, professor) VALUES (@instrumento, @dia, @professor)", GetConexao());
+                    command = new MySqlCommand("INSERT INTO aulas (instrumento, dia, professor) VALUES (@instrumento, @dia, @professor)", GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
                     command.Parameters.AddWithValue("@instrumento", instrumento);
                     command.Parameters.AddWithValue("@dia", dia);
                     command.Parameters.AddWithValue("@professor", professor);
                     command.ExecuteNonQuery();
-                    GetConexao().Close();
+                    GetConexao("server=localhost; user=root; password=; database=escola_de_musica").Close();
                     MessageBox.Show("Aula cadastrada com sucesso!");
                 }
                 catch (Exception ex)
@@ -119,12 +119,12 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             var command = new MySqlCommand();
             try
             {
-                GetConexao();
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
 
                 try
                 {
                     command = new MySqlCommand("INSERT INTO alunos (matricula, nome, endereco, cpf, telefone, instrumento) " +
-                        "VALUES (@matricula, @nome, @endereco, @cpf, @telefone, @instrumento)", GetConexao());
+                        "VALUES (@matricula, @nome, @endereco, @cpf, @telefone, @instrumento)", GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
                     command.Parameters.AddWithValue("@matricula", matricula);
                     command.Parameters.AddWithValue("@nome", nome);
                     command.Parameters.AddWithValue("@endereco", endereco);
@@ -132,7 +132,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                     command.Parameters.AddWithValue("@telefone", telefone);
                     command.Parameters.AddWithValue("@instrumento", instumento);
                     command.ExecuteNonQuery();
-                    GetConexao().Close();
+                    GetConexao("server=localhost; user=root; password=; database=escola_de_musica").Close();
                     MessageBox.Show("Aluno cadastrado com sucesso!");
                 }
                 catch (Exception ex)

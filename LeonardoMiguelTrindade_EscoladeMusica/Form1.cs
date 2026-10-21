@@ -20,7 +20,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Conexao.GetConexao();
+            Conexao.GetConexao("server=localhost; user=root; password=");
             Conexao.CreateDB();
             Conexao.CreateTables();
         }
