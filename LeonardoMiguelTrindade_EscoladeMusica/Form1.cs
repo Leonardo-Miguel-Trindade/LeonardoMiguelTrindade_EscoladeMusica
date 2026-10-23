@@ -23,6 +23,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             Conexao.GetConexao("server=localhost; user=root; password=");
             Conexao.CreateDB();
             Conexao.CreateTables();
+            
         }
 
         private void CadastrarAulas_Click(object sender, EventArgs e)

@@ -48,5 +48,12 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             form1.Show();
 
         }
+
+        private void consultar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new ConsultarAluno();
+            form.Show();
+        }
     }
 }

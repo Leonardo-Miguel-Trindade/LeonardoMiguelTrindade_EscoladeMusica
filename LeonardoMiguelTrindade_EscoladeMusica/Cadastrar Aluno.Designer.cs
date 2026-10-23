@@ -43,6 +43,7 @@
             this.txtInstrumento = new System.Windows.Forms.TextBox();
             this.cadastrar = new System.Windows.Forms.Button();
             this.voltar = new System.Windows.Forms.Button();
+            this.consultar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -191,11 +192,23 @@
             this.voltar.UseVisualStyleBackColor = true;
             this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
+            // consultar
+            // 
+            this.consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultar.Location = new System.Drawing.Point(565, 634);
+            this.consultar.Name = "consultar";
+            this.consultar.Size = new System.Drawing.Size(230, 79);
+            this.consultar.TabIndex = 15;
+            this.consultar.Text = "Consultar";
+            this.consultar.UseVisualStyleBackColor = true;
+            this.consultar.Click += new System.EventHandler(this.consultar_Click);
+            // 
             // Cadastrar_Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 735);
+            this.Controls.Add(this.consultar);
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.cadastrar);
             this.Controls.Add(this.txtInstrumento);
@@ -235,5 +248,6 @@
         private System.Windows.Forms.TextBox txtInstrumento;
         private System.Windows.Forms.Button cadastrar;
         private System.Windows.Forms.Button voltar;
+        private System.Windows.Forms.Button consultar;
     }
 }

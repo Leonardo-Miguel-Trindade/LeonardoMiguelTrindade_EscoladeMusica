@@ -107,6 +107,12 @@
       <DependentUpon>Cadastrar Aula.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexao.cs" />
+    <Compile Include="ConsultarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAluno.Designer.cs">
+      <DependentUpon>ConsultarAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastrar Aula.resx">
       <DependentUpon>Cadastrar Aula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarAluno.resx">
+      <DependentUpon>ConsultarAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

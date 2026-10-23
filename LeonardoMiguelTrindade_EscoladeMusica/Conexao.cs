@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace LeonardoMiguelTrindade_EscoladeMusica
 {
@@ -146,6 +147,33 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             }
 
             return command;
+        }
+
+        public static DataTable listarAlunos()
+        {
+            DataTable tabela = new DataTable();
+
+            try
+            {
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
+
+                try
+                {
+                    string sql = "SELECT * FROM alunos";
+                    MySqlCommand command = new MySqlCommand(sql, GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    adapter.Fill(tabela);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao listar os alunos: " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
+            }
+            return tabela;
         }
     }
 }
