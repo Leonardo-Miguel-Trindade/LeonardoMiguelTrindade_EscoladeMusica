@@ -47,9 +47,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(399, 20);
+            this.label2.Location = new System.Drawing.Point(532, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 39);
+            this.label2.Size = new System.Drawing.Size(322, 52);
             this.label2.TabIndex = 26;
             this.label2.Text = "Consultar Aula";
             // 
@@ -58,22 +59,22 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 102);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(105, 126);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(894, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(1192, 231);
             this.dataGridView1.TabIndex = 25;
             // 
             // radioButtonTerca
             // 
             this.radioButtonTerca.AutoSize = true;
             this.radioButtonTerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTerca.Location = new System.Drawing.Point(252, 412);
-            this.radioButtonTerca.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonTerca.Location = new System.Drawing.Point(336, 507);
+            this.radioButtonTerca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTerca.Name = "radioButtonTerca";
-            this.radioButtonTerca.Size = new System.Drawing.Size(102, 35);
+            this.radioButtonTerca.Size = new System.Drawing.Size(122, 42);
             this.radioButtonTerca.TabIndex = 40;
             this.radioButtonTerca.TabStop = true;
             this.radioButtonTerca.Text = "Terça";
@@ -83,10 +84,10 @@
             // 
             this.radioButtonQuarta.AutoSize = true;
             this.radioButtonQuarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonQuarta.Location = new System.Drawing.Point(358, 412);
-            this.radioButtonQuarta.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonQuarta.Location = new System.Drawing.Point(477, 507);
+            this.radioButtonQuarta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonQuarta.Name = "radioButtonQuarta";
-            this.radioButtonQuarta.Size = new System.Drawing.Size(115, 35);
+            this.radioButtonQuarta.Size = new System.Drawing.Size(138, 42);
             this.radioButtonQuarta.TabIndex = 39;
             this.radioButtonQuarta.TabStop = true;
             this.radioButtonQuarta.Text = "Quarta";
@@ -96,10 +97,10 @@
             // 
             this.radioButtonQuinta.AutoSize = true;
             this.radioButtonQuinta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonQuinta.Location = new System.Drawing.Point(474, 412);
-            this.radioButtonQuinta.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonQuinta.Location = new System.Drawing.Point(632, 507);
+            this.radioButtonQuinta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonQuinta.Name = "radioButtonQuinta";
-            this.radioButtonQuinta.Size = new System.Drawing.Size(112, 35);
+            this.radioButtonQuinta.Size = new System.Drawing.Size(134, 42);
             this.radioButtonQuinta.TabIndex = 38;
             this.radioButtonQuinta.TabStop = true;
             this.radioButtonQuinta.Text = "Quinta";
@@ -109,10 +110,10 @@
             // 
             this.radioButtonSexta.AutoSize = true;
             this.radioButtonSexta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSexta.Location = new System.Drawing.Point(587, 412);
-            this.radioButtonSexta.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonSexta.Location = new System.Drawing.Point(783, 507);
+            this.radioButtonSexta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSexta.Name = "radioButtonSexta";
-            this.radioButtonSexta.Size = new System.Drawing.Size(101, 35);
+            this.radioButtonSexta.Size = new System.Drawing.Size(122, 42);
             this.radioButtonSexta.TabIndex = 37;
             this.radioButtonSexta.TabStop = true;
             this.radioButtonSexta.Text = "Sexta";
@@ -122,10 +123,10 @@
             // 
             this.radioButtonSegunda.AutoSize = true;
             this.radioButtonSegunda.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSegunda.Location = new System.Drawing.Point(108, 412);
-            this.radioButtonSegunda.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonSegunda.Location = new System.Drawing.Point(144, 507);
+            this.radioButtonSegunda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSegunda.Name = "radioButtonSegunda";
-            this.radioButtonSegunda.Size = new System.Drawing.Size(140, 35);
+            this.radioButtonSegunda.Size = new System.Drawing.Size(168, 42);
             this.radioButtonSegunda.TabIndex = 36;
             this.radioButtonSegunda.TabStop = true;
             this.radioButtonSegunda.Text = "Segunda";
@@ -134,31 +135,30 @@
             // txtInstrumento
             // 
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstrumento.Location = new System.Drawing.Point(218, 345);
-            this.txtInstrumento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInstrumento.Location = new System.Drawing.Point(291, 425);
+            this.txtInstrumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInstrumento.Multiline = true;
             this.txtInstrumento.Name = "txtInstrumento";
-            this.txtInstrumento.Size = new System.Drawing.Size(354, 32);
+            this.txtInstrumento.Size = new System.Drawing.Size(471, 38);
             this.txtInstrumento.TabIndex = 35;
             // 
             // txtProfessor
             // 
             this.txtProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProfessor.Location = new System.Drawing.Point(188, 492);
-            this.txtProfessor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProfessor.Location = new System.Drawing.Point(251, 606);
+            this.txtProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProfessor.Multiline = true;
             this.txtProfessor.Name = "txtProfessor";
-            this.txtProfessor.Size = new System.Drawing.Size(354, 32);
+            this.txtProfessor.Size = new System.Drawing.Size(471, 38);
             this.txtProfessor.TabIndex = 34;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(43, 345);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(57, 425);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 31);
+            this.label7.Size = new System.Drawing.Size(209, 38);
             this.label7.TabIndex = 33;
             this.label7.Text = "Instrumento:";
             // 
@@ -166,10 +166,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 492);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(55, 606);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 31);
+            this.label4.Size = new System.Drawing.Size(177, 38);
             this.label4.TabIndex = 32;
             this.label4.Text = "Professor:";
             // 
@@ -177,18 +176,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 412);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(59, 507);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 31);
+            this.label3.Size = new System.Drawing.Size(79, 38);
             this.label3.TabIndex = 31;
             this.label3.Text = "Dia:";
             // 
             // ConsultarAula
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 585);
+            this.ClientSize = new System.Drawing.Size(1556, 720);
             this.Controls.Add(this.radioButtonTerca);
             this.Controls.Add(this.radioButtonQuarta);
             this.Controls.Add(this.radioButtonQuinta);
@@ -201,8 +199,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConsultarAula";
             this.Text = "ConsultarAula";
+            this.Load += new System.EventHandler(this.ConsultarAula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

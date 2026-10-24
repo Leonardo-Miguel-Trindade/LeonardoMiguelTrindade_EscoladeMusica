@@ -15,6 +15,17 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         public ConsultarAula()
         {
             InitializeComponent();
+            CarregarDados();
+        }
+
+        public void CarregarDados()
+        {
+            dataGridView1.DataSource = Conexao.listarDados("SELECT * FROM aulas");
+        }
+
+        private void ConsultarAula_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

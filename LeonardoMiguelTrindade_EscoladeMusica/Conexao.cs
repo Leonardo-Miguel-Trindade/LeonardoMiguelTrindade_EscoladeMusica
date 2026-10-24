@@ -149,7 +149,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             return command;
         }
 
-        public static DataTable listarAlunos()
+        public static DataTable listarDados(String sql)
         {
             DataTable tabela = new DataTable();
 
@@ -159,14 +159,13 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
                 try
                 {
-                    string sql = "SELECT * FROM alunos";
                     MySqlCommand command = new MySqlCommand(sql, GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
                     MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                     adapter.Fill(tabela);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao listar os alunos: " + ex.Message);
+                    MessageBox.Show("Erro ao listar os dados: " + ex.Message);
                 }
             }
             catch (Exception ex)
