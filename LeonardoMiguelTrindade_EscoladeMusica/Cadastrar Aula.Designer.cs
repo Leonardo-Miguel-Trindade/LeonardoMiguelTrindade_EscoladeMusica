@@ -41,6 +41,7 @@
             this.radioButtonTerca = new System.Windows.Forms.RadioButton();
             this.cadastrar = new System.Windows.Forms.Button();
             this.voltar = new System.Windows.Forms.Button();
+            this.consultar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInstrumento
@@ -107,7 +108,7 @@
             this.radioButtonSegunda.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonSegunda.Location = new System.Drawing.Point(107, 314);
             this.radioButtonSegunda.Name = "radioButtonSegunda";
-            this.radioButtonSegunda.Size = new System.Drawing.Size(175, 43);
+            this.radioButtonSegunda.Size = new System.Drawing.Size(168, 42);
             this.radioButtonSegunda.TabIndex = 26;
             this.radioButtonSegunda.TabStop = true;
             this.radioButtonSegunda.Text = "Segunda";
@@ -119,7 +120,7 @@
             this.radioButtonSexta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonSexta.Location = new System.Drawing.Point(745, 314);
             this.radioButtonSexta.Name = "radioButtonSexta";
-            this.radioButtonSexta.Size = new System.Drawing.Size(125, 43);
+            this.radioButtonSexta.Size = new System.Drawing.Size(122, 42);
             this.radioButtonSexta.TabIndex = 27;
             this.radioButtonSexta.TabStop = true;
             this.radioButtonSexta.Text = "Sexta";
@@ -131,7 +132,7 @@
             this.radioButtonQuinta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonQuinta.Location = new System.Drawing.Point(595, 314);
             this.radioButtonQuinta.Name = "radioButtonQuinta";
-            this.radioButtonQuinta.Size = new System.Drawing.Size(138, 43);
+            this.radioButtonQuinta.Size = new System.Drawing.Size(134, 42);
             this.radioButtonQuinta.TabIndex = 28;
             this.radioButtonQuinta.TabStop = true;
             this.radioButtonQuinta.Text = "Quinta";
@@ -143,7 +144,7 @@
             this.radioButtonQuarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonQuarta.Location = new System.Drawing.Point(440, 314);
             this.radioButtonQuarta.Name = "radioButtonQuarta";
-            this.radioButtonQuarta.Size = new System.Drawing.Size(141, 43);
+            this.radioButtonQuarta.Size = new System.Drawing.Size(138, 42);
             this.radioButtonQuarta.TabIndex = 29;
             this.radioButtonQuarta.TabStop = true;
             this.radioButtonQuarta.Text = "Quarta";
@@ -155,7 +156,7 @@
             this.radioButtonTerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonTerca.Location = new System.Drawing.Point(298, 314);
             this.radioButtonTerca.Name = "radioButtonTerca";
-            this.radioButtonTerca.Size = new System.Drawing.Size(125, 43);
+            this.radioButtonTerca.Size = new System.Drawing.Size(122, 42);
             this.radioButtonTerca.TabIndex = 30;
             this.radioButtonTerca.TabStop = true;
             this.radioButtonTerca.Text = "Terça";
@@ -183,11 +184,23 @@
             this.voltar.UseVisualStyleBackColor = true;
             this.voltar.Click += new System.EventHandler(this.voltar_Click);
             // 
+            // consultar
+            // 
+            this.consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultar.Location = new System.Drawing.Point(537, 654);
+            this.consultar.Name = "consultar";
+            this.consultar.Size = new System.Drawing.Size(230, 79);
+            this.consultar.TabIndex = 33;
+            this.consultar.Text = "Consultar";
+            this.consultar.UseVisualStyleBackColor = true;
+            this.consultar.Click += new System.EventHandler(this.consultar_Click);
+            // 
             // Cadastrar_Aula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1298, 745);
+            this.Controls.Add(this.consultar);
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.cadastrar);
             this.Controls.Add(this.radioButtonTerca);
@@ -224,5 +237,6 @@
         private System.Windows.Forms.RadioButton radioButtonTerca;
         private System.Windows.Forms.Button cadastrar;
         private System.Windows.Forms.Button voltar;
+        private System.Windows.Forms.Button consultar;
     }
 }
