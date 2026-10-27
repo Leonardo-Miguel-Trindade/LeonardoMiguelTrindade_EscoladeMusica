@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CadastrarAulas = new System.Windows.Forms.Button();
             this.CadastrarAluno = new System.Windows.Forms.Button();
+            this.sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -39,13 +40,13 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(522, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 52);
+            this.label1.Size = new System.Drawing.Size(377, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Escola de Música";
             // 
             // CadastrarAulas
             // 
-            this.CadastrarAulas.Location = new System.Drawing.Point(46, 566);
+            this.CadastrarAulas.Location = new System.Drawing.Point(106, 487);
             this.CadastrarAulas.Name = "CadastrarAulas";
             this.CadastrarAulas.Size = new System.Drawing.Size(274, 100);
             this.CadastrarAulas.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // CadastrarAluno
             // 
-            this.CadastrarAluno.Location = new System.Drawing.Point(388, 566);
+            this.CadastrarAluno.Location = new System.Drawing.Point(971, 487);
             this.CadastrarAluno.Name = "CadastrarAluno";
             this.CadastrarAluno.Size = new System.Drawing.Size(274, 100);
             this.CadastrarAluno.TabIndex = 2;
@@ -63,11 +64,22 @@
             this.CadastrarAluno.UseVisualStyleBackColor = true;
             this.CadastrarAluno.Click += new System.EventHandler(this.CadastrarAluno_Click);
             // 
+            // sair
+            // 
+            this.sair.Location = new System.Drawing.Point(592, 570);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(274, 100);
+            this.sair.TabIndex = 3;
+            this.sair.Text = "Sair";
+            this.sair.UseVisualStyleBackColor = true;
+            this.sair.Click += new System.EventHandler(this.sair_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1473, 702);
+            this.Controls.Add(this.sair);
             this.Controls.Add(this.CadastrarAluno);
             this.Controls.Add(this.CadastrarAulas);
             this.Controls.Add(this.label1);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button CadastrarAulas;
         private System.Windows.Forms.Button CadastrarAluno;
+        private System.Windows.Forms.Button sair;
     }
 }
 

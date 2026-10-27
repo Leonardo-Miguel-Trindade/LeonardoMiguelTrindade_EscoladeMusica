@@ -39,5 +39,10 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             var formCadastrarAluno = new Cadastrar_Aluno();
             formCadastrarAluno.Show();
         }
+
+        private void sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

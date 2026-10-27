@@ -40,6 +40,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Voltar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.editar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,12 +64,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(105, 126);
+            this.dataGridView1.Location = new System.Drawing.Point(105, 193);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1192, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(1192, 164);
             this.dataGridView1.TabIndex = 25;
             // 
             // radioButtonTerca
@@ -182,11 +187,68 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Dia:";
             // 
+            // Voltar
+            // 
+            this.Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Voltar.Location = new System.Drawing.Point(1270, 606);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(230, 79);
+            this.Voltar.TabIndex = 41;
+            this.Voltar.Text = "Voltar";
+            this.Voltar.UseVisualStyleBackColor = true;
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1270, 511);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 79);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // editar
+            // 
+            this.editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editar.Location = new System.Drawing.Point(1270, 406);
+            this.editar.Name = "editar";
+            this.editar.Size = new System.Drawing.Size(230, 79);
+            this.editar.TabIndex = 42;
+            this.editar.Text = "Editar";
+            this.editar.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(114, 74);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(225, 52);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Pesquisar";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(112, 140);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 46);
+            this.textBox1.TabIndex = 44;
+            // 
             // ConsultarAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 720);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.editar);
+            this.Controls.Add(this.Voltar);
             this.Controls.Add(this.radioButtonTerca);
             this.Controls.Add(this.radioButtonQuarta);
             this.Controls.Add(this.radioButtonQuinta);
@@ -199,7 +261,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultarAula";
             this.Text = "ConsultarAula";
             this.Load += new System.EventHandler(this.ConsultarAula_Load);
@@ -223,5 +285,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Voltar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button editar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
