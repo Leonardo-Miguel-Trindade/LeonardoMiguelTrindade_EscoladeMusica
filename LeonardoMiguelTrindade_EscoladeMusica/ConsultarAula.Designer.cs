@@ -45,6 +45,10 @@
             this.editar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +67,11 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.dia,
+            this.professor,
+            this.instrumento});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(105, 193);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -239,6 +248,30 @@
             this.textBox1.Size = new System.Drawing.Size(227, 46);
             this.textBox1.TabIndex = 44;
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            // 
+            // dia
+            // 
+            this.dia.HeaderText = "DIA";
+            this.dia.MinimumWidth = 6;
+            this.dia.Name = "dia";
+            // 
+            // professor
+            // 
+            this.professor.HeaderText = "PROFESSOR";
+            this.professor.MinimumWidth = 6;
+            this.professor.Name = "professor";
+            // 
+            // instrumento
+            // 
+            this.instrumento.HeaderText = "INSTRUMENTO";
+            this.instrumento.MinimumWidth = 6;
+            this.instrumento.Name = "instrumento";
+            // 
             // ConsultarAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -290,5 +323,9 @@
         private System.Windows.Forms.Button editar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn professor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instrumento;
     }
 }

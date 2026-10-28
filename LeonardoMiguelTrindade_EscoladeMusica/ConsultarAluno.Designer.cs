@@ -47,6 +47,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.editar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.MATRICULA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENDERECO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TELEFONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INSTRUMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +60,13 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MATRICULA,
+            this.NOME,
+            this.CPF,
+            this.ENDERECO,
+            this.TELEFONE,
+            this.INSTRUMENTO});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(128, 249);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -247,6 +260,42 @@
             this.button1.Text = "Excluir";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // MATRICULA
+            // 
+            this.MATRICULA.HeaderText = "MATRICULA";
+            this.MATRICULA.MinimumWidth = 6;
+            this.MATRICULA.Name = "MATRICULA";
+            // 
+            // NOME
+            // 
+            this.NOME.HeaderText = "NOME";
+            this.NOME.MinimumWidth = 6;
+            this.NOME.Name = "NOME";
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.MinimumWidth = 6;
+            this.CPF.Name = "CPF";
+            // 
+            // ENDERECO
+            // 
+            this.ENDERECO.HeaderText = "ENDEREÇO";
+            this.ENDERECO.MinimumWidth = 6;
+            this.ENDERECO.Name = "ENDERECO";
+            // 
+            // TELEFONE
+            // 
+            this.TELEFONE.HeaderText = "TELEFONE";
+            this.TELEFONE.MinimumWidth = 6;
+            this.TELEFONE.Name = "TELEFONE";
+            // 
+            // INSTRUMENTO
+            // 
+            this.INSTRUMENTO.HeaderText = "INSTRUMENTO";
+            this.INSTRUMENTO.MinimumWidth = 6;
+            this.INSTRUMENTO.Name = "INSTRUMENTO";
+            // 
             // ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,6 +323,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ConsultarAluno";
             this.Text = "ConsultarAluno";
+            this.Load += new System.EventHandler(this.ConsultarAluno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,5 +351,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button editar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MATRICULA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ENDERECO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INSTRUMENTO;
     }
 }
