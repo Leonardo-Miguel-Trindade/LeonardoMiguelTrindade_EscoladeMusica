@@ -49,6 +49,8 @@
             this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.professor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radioButtonID = new System.Windows.Forms.RadioButton();
+            this.radioButtonInstrumento = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -241,12 +243,13 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(112, 140);
+            this.textBox1.Location = new System.Drawing.Point(346, 82);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 46);
             this.textBox1.TabIndex = 44;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // id
             // 
@@ -272,11 +275,37 @@
             this.instrumento.MinimumWidth = 6;
             this.instrumento.Name = "instrumento";
             // 
+            // radioButtonID
+            // 
+            this.radioButtonID.AutoSize = true;
+            this.radioButtonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonID.Location = new System.Drawing.Point(123, 146);
+            this.radioButtonID.Name = "radioButtonID";
+            this.radioButtonID.Size = new System.Drawing.Size(57, 33);
+            this.radioButtonID.TabIndex = 46;
+            this.radioButtonID.TabStop = true;
+            this.radioButtonID.Text = "ID";
+            this.radioButtonID.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonInstrumento
+            // 
+            this.radioButtonInstrumento.AutoSize = true;
+            this.radioButtonInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonInstrumento.Location = new System.Drawing.Point(186, 146);
+            this.radioButtonInstrumento.Name = "radioButtonInstrumento";
+            this.radioButtonInstrumento.Size = new System.Drawing.Size(159, 33);
+            this.radioButtonInstrumento.TabIndex = 48;
+            this.radioButtonInstrumento.TabStop = true;
+            this.radioButtonInstrumento.Text = "Instrumento";
+            this.radioButtonInstrumento.UseVisualStyleBackColor = true;
+            // 
             // ConsultarAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 720);
+            this.Controls.Add(this.radioButtonInstrumento);
+            this.Controls.Add(this.radioButtonID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -327,5 +356,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dia;
         private System.Windows.Forms.DataGridViewTextBoxColumn professor;
         private System.Windows.Forms.DataGridViewTextBoxColumn instrumento;
+        private System.Windows.Forms.RadioButton radioButtonID;
+        private System.Windows.Forms.RadioButton radioButtonInstrumento;
     }
 }

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MATRICULA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENDERECO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TELEFONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INSTRUMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInstrumento = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
@@ -47,12 +53,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.editar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.MATRICULA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ENDERECO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.INSTRUMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.radioButtonMatricula = new System.Windows.Forms.RadioButton();
+            this.radioButtonNome = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +78,42 @@
             this.dataGridView1.Size = new System.Drawing.Size(1192, 164);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // MATRICULA
+            // 
+            this.MATRICULA.HeaderText = "MATRICULA";
+            this.MATRICULA.MinimumWidth = 6;
+            this.MATRICULA.Name = "MATRICULA";
+            // 
+            // NOME
+            // 
+            this.NOME.HeaderText = "NOME";
+            this.NOME.MinimumWidth = 6;
+            this.NOME.Name = "NOME";
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.MinimumWidth = 6;
+            this.CPF.Name = "CPF";
+            // 
+            // ENDERECO
+            // 
+            this.ENDERECO.HeaderText = "ENDEREÇO";
+            this.ENDERECO.MinimumWidth = 6;
+            this.ENDERECO.Name = "ENDERECO";
+            // 
+            // TELEFONE
+            // 
+            this.TELEFONE.HeaderText = "TELEFONE";
+            this.TELEFONE.MinimumWidth = 6;
+            this.TELEFONE.Name = "TELEFONE";
+            // 
+            // INSTRUMENTO
+            // 
+            this.INSTRUMENTO.HeaderText = "INSTRUMENTO";
+            this.INSTRUMENTO.MinimumWidth = 6;
+            this.INSTRUMENTO.Name = "INSTRUMENTO";
             // 
             // label2
             // 
@@ -222,18 +260,19 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(128, 180);
+            this.textBox1.Location = new System.Drawing.Point(128, 133);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 46);
             this.textBox1.TabIndex = 34;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(130, 114);
+            this.label8.Location = new System.Drawing.Point(130, 79);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(225, 52);
@@ -260,47 +299,36 @@
             this.button1.Text = "Excluir";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // MATRICULA
+            // radioButtonMatricula
             // 
-            this.MATRICULA.HeaderText = "MATRICULA";
-            this.MATRICULA.MinimumWidth = 6;
-            this.MATRICULA.Name = "MATRICULA";
+            this.radioButtonMatricula.AutoSize = true;
+            this.radioButtonMatricula.Location = new System.Drawing.Point(128, 206);
+            this.radioButtonMatricula.Name = "radioButtonMatricula";
+            this.radioButtonMatricula.Size = new System.Drawing.Size(82, 20);
+            this.radioButtonMatricula.TabIndex = 38;
+            this.radioButtonMatricula.TabStop = true;
+            this.radioButtonMatricula.Text = "Matrícula";
+            this.radioButtonMatricula.UseVisualStyleBackColor = true;
+            this.radioButtonMatricula.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // NOME
+            // radioButtonNome
             // 
-            this.NOME.HeaderText = "NOME";
-            this.NOME.MinimumWidth = 6;
-            this.NOME.Name = "NOME";
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "CPF";
-            this.CPF.MinimumWidth = 6;
-            this.CPF.Name = "CPF";
-            // 
-            // ENDERECO
-            // 
-            this.ENDERECO.HeaderText = "ENDEREÇO";
-            this.ENDERECO.MinimumWidth = 6;
-            this.ENDERECO.Name = "ENDERECO";
-            // 
-            // TELEFONE
-            // 
-            this.TELEFONE.HeaderText = "TELEFONE";
-            this.TELEFONE.MinimumWidth = 6;
-            this.TELEFONE.Name = "TELEFONE";
-            // 
-            // INSTRUMENTO
-            // 
-            this.INSTRUMENTO.HeaderText = "INSTRUMENTO";
-            this.INSTRUMENTO.MinimumWidth = 6;
-            this.INSTRUMENTO.Name = "INSTRUMENTO";
+            this.radioButtonNome.AutoSize = true;
+            this.radioButtonNome.Location = new System.Drawing.Point(213, 206);
+            this.radioButtonNome.Name = "radioButtonNome";
+            this.radioButtonNome.Size = new System.Drawing.Size(65, 20);
+            this.radioButtonNome.TabIndex = 39;
+            this.radioButtonNome.TabStop = true;
+            this.radioButtonNome.Text = "Nome";
+            this.radioButtonNome.UseVisualStyleBackColor = true;
             // 
             // ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1517, 853);
+            this.Controls.Add(this.radioButtonNome);
+            this.Controls.Add(this.radioButtonMatricula);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.editar);
             this.Controls.Add(this.label8);
@@ -357,5 +385,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ENDERECO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
         private System.Windows.Forms.DataGridViewTextBoxColumn INSTRUMENTO;
+        private System.Windows.Forms.RadioButton radioButtonMatricula;
+        private System.Windows.Forms.RadioButton radioButtonNome;
     }
 }

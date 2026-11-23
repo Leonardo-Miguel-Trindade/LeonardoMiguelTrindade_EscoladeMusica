@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace LeonardoMiguelTrindade_EscoladeMusica
 {
@@ -33,7 +34,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new ConsultarAluno();
+            var form = new Cadastrar_Aluno();
             form.Show();
         }
 
@@ -93,6 +94,46 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             dataGridView1.RowsDefaultCellStyle.BackColor = Color.Coral;
 
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkRed;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string sql = "";
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                sql = "SELECT * FROM aulas";
+                radioButtonNome.Checked = false;
+                radioButtonMatricula.Checked = false;
+            }
+            else if (radioButtonMatricula.Checked)
+            {
+                sql = $"SELECT * FROM alunos WHERE matricula LIKE '%{textBox1.Text}%'";
+            }
+            else if (radioButtonNome.Checked)
+            {
+                sql = $"SELECT * FROM alunos WHERE nome LIKE '%{textBox1.Text}%'";
+            }
+
+            //executando o banco
+            try
+            {
+                FormatarDG();
+                Conexao.GetConexao("server=localhost;user id=root;password=;database=escola_de_musica");
+                dataGridView1.DataSource = Conexao.listarDados(sql);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Conectar com o banco de dados: " + erro.Message);
+            }
+            finally
+            {
+                Conexao.GetConexao("server=localhost;user id=root;password=;database=escola_de_musica").Close();
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -78,5 +78,40 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkRed;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string sql = "";
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                sql = "SELECT * FROM aulas";
+                radioButtonID.Checked = false;
+                radioButtonInstrumento.Checked = false;
+            }
+            else if (radioButtonID.Checked)
+            {
+                sql = $"SELECT * FROM aulas WHERE id LIKE '%{textBox1.Text}%'";
+            }
+            else if (radioButtonInstrumento.Checked)
+            {
+                sql = $"SELECT * FROM aulas WHERE instrumento LIKE '%{textBox1.Text}%'";
+            }
+
+            //executando o banco
+            try
+            {
+                FormatarDG();
+                Conexao.GetConexao("server=localhost;user id=root;password=;database=escola_de_musica");
+                dataGridView1.DataSource = Conexao.listarDados(sql);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Conectar com o banco de dados: " + erro.Message);
+            }
+            finally 
+            {
+                Conexao.GetConexao("server=localhost;user id=root;password=;database=escola_de_musica").Close();
+            }
+        }
     }
 }
