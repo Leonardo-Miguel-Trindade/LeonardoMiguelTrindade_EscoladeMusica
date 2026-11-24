@@ -30,6 +30,10 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radioButtonTerca = new System.Windows.Forms.RadioButton();
             this.radioButtonQuarta = new System.Windows.Forms.RadioButton();
             this.radioButtonQuinta = new System.Windows.Forms.RadioButton();
@@ -41,16 +45,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Voltar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.excluir = new System.Windows.Forms.Button();
             this.editar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.professor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instrumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radioButtonID = new System.Windows.Forms.RadioButton();
             this.radioButtonInstrumento = new System.Windows.Forms.RadioButton();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,12 +84,38 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1192, 164);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            // 
+            // dia
+            // 
+            this.dia.HeaderText = "DIA";
+            this.dia.MinimumWidth = 6;
+            this.dia.Name = "dia";
+            // 
+            // professor
+            // 
+            this.professor.HeaderText = "PROFESSOR";
+            this.professor.MinimumWidth = 6;
+            this.professor.Name = "professor";
+            // 
+            // instrumento
+            // 
+            this.instrumento.HeaderText = "INSTRUMENTO";
+            this.instrumento.MinimumWidth = 6;
+            this.instrumento.Name = "instrumento";
             // 
             // radioButtonTerca
             // 
             this.radioButtonTerca.AutoSize = true;
             this.radioButtonTerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTerca.Location = new System.Drawing.Point(336, 507);
+            this.radioButtonTerca.Location = new System.Drawing.Point(305, 568);
             this.radioButtonTerca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTerca.Name = "radioButtonTerca";
             this.radioButtonTerca.Size = new System.Drawing.Size(122, 42);
@@ -100,7 +128,7 @@
             // 
             this.radioButtonQuarta.AutoSize = true;
             this.radioButtonQuarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonQuarta.Location = new System.Drawing.Point(477, 507);
+            this.radioButtonQuarta.Location = new System.Drawing.Point(446, 568);
             this.radioButtonQuarta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonQuarta.Name = "radioButtonQuarta";
             this.radioButtonQuarta.Size = new System.Drawing.Size(138, 42);
@@ -113,7 +141,7 @@
             // 
             this.radioButtonQuinta.AutoSize = true;
             this.radioButtonQuinta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonQuinta.Location = new System.Drawing.Point(632, 507);
+            this.radioButtonQuinta.Location = new System.Drawing.Point(601, 568);
             this.radioButtonQuinta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonQuinta.Name = "radioButtonQuinta";
             this.radioButtonQuinta.Size = new System.Drawing.Size(134, 42);
@@ -126,7 +154,7 @@
             // 
             this.radioButtonSexta.AutoSize = true;
             this.radioButtonSexta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSexta.Location = new System.Drawing.Point(783, 507);
+            this.radioButtonSexta.Location = new System.Drawing.Point(752, 568);
             this.radioButtonSexta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSexta.Name = "radioButtonSexta";
             this.radioButtonSexta.Size = new System.Drawing.Size(122, 42);
@@ -139,7 +167,7 @@
             // 
             this.radioButtonSegunda.AutoSize = true;
             this.radioButtonSegunda.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSegunda.Location = new System.Drawing.Point(144, 507);
+            this.radioButtonSegunda.Location = new System.Drawing.Point(113, 568);
             this.radioButtonSegunda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSegunda.Name = "radioButtonSegunda";
             this.radioButtonSegunda.Size = new System.Drawing.Size(168, 42);
@@ -151,7 +179,7 @@
             // txtInstrumento
             // 
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstrumento.Location = new System.Drawing.Point(291, 425);
+            this.txtInstrumento.Location = new System.Drawing.Point(260, 486);
             this.txtInstrumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInstrumento.Multiline = true;
             this.txtInstrumento.Name = "txtInstrumento";
@@ -161,7 +189,7 @@
             // txtProfessor
             // 
             this.txtProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProfessor.Location = new System.Drawing.Point(251, 606);
+            this.txtProfessor.Location = new System.Drawing.Point(220, 667);
             this.txtProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProfessor.Multiline = true;
             this.txtProfessor.Name = "txtProfessor";
@@ -172,7 +200,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(57, 425);
+            this.label7.Location = new System.Drawing.Point(26, 486);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(209, 38);
             this.label7.TabIndex = 33;
@@ -182,7 +210,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(55, 606);
+            this.label4.Location = new System.Drawing.Point(24, 667);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 38);
             this.label4.TabIndex = 32;
@@ -192,7 +220,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 507);
+            this.label3.Location = new System.Drawing.Point(28, 568);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 38);
             this.label3.TabIndex = 31;
@@ -209,15 +237,16 @@
             this.Voltar.UseVisualStyleBackColor = true;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
-            // button1
+            // excluir
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1270, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 79);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excluir.Location = new System.Drawing.Point(1270, 511);
+            this.excluir.Name = "excluir";
+            this.excluir.Size = new System.Drawing.Size(230, 79);
+            this.excluir.TabIndex = 43;
+            this.excluir.Text = "Excluir";
+            this.excluir.UseVisualStyleBackColor = true;
+            this.excluir.Click += new System.EventHandler(this.button1_Click);
             // 
             // editar
             // 
@@ -251,30 +280,6 @@
             this.textBox1.TabIndex = 44;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            // 
-            // dia
-            // 
-            this.dia.HeaderText = "DIA";
-            this.dia.MinimumWidth = 6;
-            this.dia.Name = "dia";
-            // 
-            // professor
-            // 
-            this.professor.HeaderText = "PROFESSOR";
-            this.professor.MinimumWidth = 6;
-            this.professor.Name = "professor";
-            // 
-            // instrumento
-            // 
-            this.instrumento.HeaderText = "INSTRUMENTO";
-            this.instrumento.MinimumWidth = 6;
-            this.instrumento.Name = "instrumento";
-            // 
             // radioButtonID
             // 
             this.radioButtonID.AutoSize = true;
@@ -299,16 +304,40 @@
             this.radioButtonInstrumento.Text = "Instrumento";
             this.radioButtonInstrumento.UseVisualStyleBackColor = true;
             // 
+            // textBoxID
+            // 
+            this.textBoxID.Enabled = false;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(97, 415);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxID.Multiline = true;
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(104, 38);
+            this.textBoxID.TabIndex = 50;
+            this.textBoxID.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 415);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 38);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "ID:";
+            // 
             // ConsultarAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1556, 720);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButtonInstrumento);
             this.Controls.Add(this.radioButtonID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.excluir);
             this.Controls.Add(this.editar);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.radioButtonTerca);
@@ -348,7 +377,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Voltar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button excluir;
         private System.Windows.Forms.Button editar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
@@ -358,5 +387,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn instrumento;
         private System.Windows.Forms.RadioButton radioButtonID;
         private System.Windows.Forms.RadioButton radioButtonInstrumento;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label1;
     }
 }

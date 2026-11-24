@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx.Crud;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace LeonardoMiguelTrindade_EscoladeMusica
@@ -45,7 +47,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         public void FormatarDG()
         {
-            dataGridView1.Columns["MATRICULA"].DataPropertyName = "id";
+            dataGridView1.Columns["MATRICULA"].DataPropertyName = "matricula";
             dataGridView1.Columns["NOME"].DataPropertyName = "nome";
             dataGridView1.Columns["ENDERECO"].DataPropertyName = "endereco";
             dataGridView1.Columns["CPF"].DataPropertyName = "cpf";
@@ -133,6 +135,24 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Conexao.ExcluirAluno("DELETE FROM alunos WHERE matricula = " + txtMatricula.Text);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            DataGridViewRow linha = dataGridView1.Rows[e.RowIndex];
+            txtMatricula.Text = linha.Cells["MATRICULA"].Value.ToString();
+            txtInstrumento.Text = linha.Cells["INSTRUMENTO"].Value.ToString();
+            txtNome.Text = linha.Cells["NOME"].Value.ToString();
+            txtCPF.Text = linha.Cells["CPF"].Value.ToString();
+            txtEndereco.Text = linha.Cells["ENDERECO"].Value.ToString();
+            txtTelefone.Text = linha.Cells["TELEFONE"].Value.ToString();
 
         }
     }

@@ -28,12 +28,12 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             {
                 MessageBox.Show("Erro ao conectar ao banco de dados: " + ex.Message);
             }
-            
+
             return conexao;
         }
 
         //Este método cria o banco de dados "escola_de_musica" caso ele não exista.
-        public static MySqlCommand CreateDB() 
+        public static MySqlCommand CreateDB()
         {
             var command = new MySqlCommand();
             try
@@ -111,7 +111,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             {
                 MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
             }
-            
+
             return command;
         }
 
@@ -173,6 +173,58 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                 MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
             }
             return tabela;
+        }
+
+        public static MySqlCommand ExcluirAula(String sql)
+        {
+            var command = new MySqlCommand();
+            try
+            {
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
+
+                try
+                {
+                    command = new MySqlCommand(sql, GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Aula excluída com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao listar os dados: " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
+            }
+            return command;
+        }
+
+        public static MySqlCommand ExcluirAluno(String sql)
+        {
+            var command = new MySqlCommand();
+            try
+            {
+                GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
+
+                try
+                {
+                    command = new MySqlCommand(sql, GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Aluno excluído com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao listar os dados: " + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
+            }
+            return command;
         }
     }
 }

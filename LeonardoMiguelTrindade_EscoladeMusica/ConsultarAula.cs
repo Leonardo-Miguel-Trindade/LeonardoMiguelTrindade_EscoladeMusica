@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Mysqlx.Crud;
+using Org.BouncyCastle.Utilities.Zlib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -112,6 +114,52 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             {
                 Conexao.GetConexao("server=localhost;user id=root;password=;database=escola_de_musica").Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Conexao.ExcluirAula("DELETE FROM aulas WHERE ID = " + textBoxID.Text);
+
+            }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            DataGridViewRow linha = dataGridView1.Rows[e.RowIndex];
+            textBoxID.Text = linha.Cells["ID"].Value.ToString();
+            txtInstrumento.Text = linha.Cells["Instrumento"].Value.ToString();
+            txtProfessor.Text = linha.Cells["Professor"].Value.ToString();
+
+            if (linha.Cells["Dia"].Value.ToString() == "SEGUNDA")
+            {
+                radioButtonSegunda.Checked = true;
+            }
+            else if (linha.Cells["Dia"].Value.ToString() == "TERCA")
+            {
+                radioButtonTerca.Checked = true;
+            }
+            else if (linha.Cells["Dia"].Value.ToString() == "QUARTA")
+            {
+                radioButtonQuarta.Checked = true;
+            }
+            else if (linha.Cells["Dia"].Value.ToString() == "QUINTA")
+            {
+                radioButtonQuinta.Checked = true;
+            }
+            else if (linha.Cells["Dia"].Value.ToString() == "SEXTA")
+            {
+                radioButtonSexta.Checked = true;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
