@@ -179,6 +179,7 @@
             // 
             // txtMatricula
             // 
+            this.txtMatricula.Enabled = false;
             this.txtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatricula.Location = new System.Drawing.Point(218, 453);
             this.txtMatricula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -289,6 +290,7 @@
             this.editar.TabIndex = 36;
             this.editar.Text = "Editar";
             this.editar.UseVisualStyleBackColor = true;
+            this.editar.Click += new System.EventHandler(this.editar_Click);
             // 
             // button1
             // 

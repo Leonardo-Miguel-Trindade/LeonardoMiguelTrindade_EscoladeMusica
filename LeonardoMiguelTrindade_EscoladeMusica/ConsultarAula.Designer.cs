@@ -257,6 +257,7 @@
             this.editar.TabIndex = 42;
             this.editar.Text = "Editar";
             this.editar.UseVisualStyleBackColor = true;
+            this.editar.Click += new System.EventHandler(this.editar_Click);
             // 
             // label8
             // 

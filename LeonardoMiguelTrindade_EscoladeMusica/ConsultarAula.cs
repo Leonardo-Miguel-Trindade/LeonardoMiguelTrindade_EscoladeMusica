@@ -1,4 +1,5 @@
-﻿using Mysqlx.Crud;
+﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using Org.BouncyCastle.Utilities.Zlib;
 using System;
 using System.Collections.Generic;
@@ -119,6 +120,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         private void button1_Click(object sender, EventArgs e)
         {
             Conexao.ExcluirAula("DELETE FROM aulas WHERE ID = " + textBoxID.Text);
+            CarregarDados();
 
             }
 
@@ -160,6 +162,64 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void editar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxID.Text))
+            {
+                var command = new MySqlCommand();
+                try
+                {
+                    Conexao.GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
+
+                    try
+                    {
+                        String dia = "";
+                        if (radioButtonSegunda.Checked)
+                        {
+                          dia = "SEGUNDA";
+                        }else if (radioButtonTerca.Checked)
+                        {
+                            dia = "TERCA";
+                        }
+                        else if (radioButtonQuarta.Checked)
+                        {
+                            dia = "QUARTA";
+                        }
+                        else if (radioButtonQuinta.Checked)
+                        {
+                            dia = "QUINTA";
+                        }
+                        else if (radioButtonSexta.Checked)
+                        {
+                            dia = "SEXTA";
+                        }
+
+                        command = new MySqlCommand("UPDATE aulas SET INSTRUMENTO = '" + txtInstrumento.Text + "', PROFESSOR = '" + txtProfessor.Text + "', DIA = '" + dia + "' WHERE ID = '" + textBoxID.Text + "';",
+                            Conexao.GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
+
+                        command.ExecuteNonQuery();
+
+                        CarregarDados();
+
+                        MessageBox.Show("Aula editada com sucesso!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao listar os dados: " + ex.Message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para editar.");
+            }
         }
     }
 }

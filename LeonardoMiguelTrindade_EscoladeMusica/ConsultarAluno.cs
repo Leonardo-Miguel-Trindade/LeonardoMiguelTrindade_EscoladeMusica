@@ -1,4 +1,5 @@
-﻿using Mysqlx.Crud;
+﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -141,6 +142,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         private void button1_Click(object sender, EventArgs e)
         {
             Conexao.ExcluirAluno("DELETE FROM alunos WHERE matricula = " + txtMatricula.Text);
+            CarregarDados();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -154,6 +156,49 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             txtEndereco.Text = linha.Cells["ENDERECO"].Value.ToString();
             txtTelefone.Text = linha.Cells["TELEFONE"].Value.ToString();
 
+        }
+
+        public void editarAluno()
+        {
+            if (!string.IsNullOrEmpty(txtMatricula.Text))
+            {
+                var command = new MySqlCommand();
+                try
+                {
+                    Conexao.GetConexao("server=localhost; user=root; password=; database=escola_de_musica");
+
+                    try
+                    {
+                        command = new MySqlCommand("UPDATE alunos SET NOME = '"+ txtNome.Text +"', CPF = '"+ txtCPF.Text +"', ENDERECO = '"+ txtEndereco.Text +"', TELEFONE = '"+ txtTelefone.Text +"', INSTRUMENTO = '"+ txtInstrumento.Text +"' WHERE MATRICULA = '"+ txtMatricula.Text +"';",
+                            Conexao.GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
+                        
+                        command.ExecuteNonQuery();
+
+                        CarregarDados();
+
+                        MessageBox.Show("Aluno editado com sucesso!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao listar os dados: " + ex.Message);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro para se conectar ao banco de dados: " + ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para editar.");
+            }
+
+        }
+
+        private void editar_Click(object sender, EventArgs e)
+        {
+            editarAluno();
         }
     }
 }

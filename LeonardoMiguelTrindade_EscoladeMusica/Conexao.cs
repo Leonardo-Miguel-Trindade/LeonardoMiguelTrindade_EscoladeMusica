@@ -14,6 +14,10 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 {
     internal class Conexao
     {
+        static ConsultarAluno al = new ConsultarAluno();
+        static ConsultarAluno au = new ConsultarAluno();
+
+
         //Este método retorna uma conexão aberta com o banco de dados MySQL.
         public static MySqlConnection GetConexao(string str)
         {
@@ -186,7 +190,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                 {
                     command = new MySqlCommand(sql, GetConexao("server=localhost; user=root; password=; database=escola_de_musica"));
                     command.ExecuteNonQuery();
-
+                    
                     MessageBox.Show("Aula excluída com sucesso!");
                 }
                 catch (Exception ex)
