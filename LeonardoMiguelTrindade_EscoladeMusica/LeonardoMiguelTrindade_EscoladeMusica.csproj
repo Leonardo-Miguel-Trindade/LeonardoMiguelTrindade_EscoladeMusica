@@ -150,6 +150,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -169,6 +170,11 @@
     <Content Include="database\EscolaDeMusica.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\The Art Of%284%29.jpg" />
+    <None Include="Resources\The Art Of%283%29.jpg" />
+    <None Include="Resources\The Art Of%282%29.jpg" />
+    <None Include="Resources\The Art Of%281%29.jpg" />
+    <None Include="Resources\The Art Of.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

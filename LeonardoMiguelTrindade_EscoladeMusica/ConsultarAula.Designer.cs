@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,17 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(532, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(322, 52);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Consultar Aula";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -77,12 +65,12 @@
             this.professor,
             this.instrumento});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(105, 193);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 265);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1192, 164);
+            this.dataGridView1.Size = new System.Drawing.Size(1141, 209);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -114,72 +102,79 @@
             // radioButtonTerca
             // 
             this.radioButtonTerca.AutoSize = true;
-            this.radioButtonTerca.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTerca.Location = new System.Drawing.Point(305, 568);
+            this.radioButtonTerca.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonTerca.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTerca.Location = new System.Drawing.Point(305, 606);
             this.radioButtonTerca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonTerca.Name = "radioButtonTerca";
-            this.radioButtonTerca.Size = new System.Drawing.Size(122, 42);
+            this.radioButtonTerca.Size = new System.Drawing.Size(135, 37);
             this.radioButtonTerca.TabIndex = 40;
             this.radioButtonTerca.TabStop = true;
             this.radioButtonTerca.Text = "Terça";
-            this.radioButtonTerca.UseVisualStyleBackColor = true;
+            this.radioButtonTerca.UseVisualStyleBackColor = false;
             // 
             // radioButtonQuarta
             // 
             this.radioButtonQuarta.AutoSize = true;
-            this.radioButtonQuarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonQuarta.Location = new System.Drawing.Point(446, 568);
+            this.radioButtonQuarta.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonQuarta.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonQuarta.Location = new System.Drawing.Point(446, 604);
             this.radioButtonQuarta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonQuarta.Name = "radioButtonQuarta";
-            this.radioButtonQuarta.Size = new System.Drawing.Size(138, 42);
+            this.radioButtonQuarta.Size = new System.Drawing.Size(168, 37);
             this.radioButtonQuarta.TabIndex = 39;
             this.radioButtonQuarta.TabStop = true;
             this.radioButtonQuarta.Text = "Quarta";
-            this.radioButtonQuarta.UseVisualStyleBackColor = true;
+            this.radioButtonQuarta.UseVisualStyleBackColor = false;
             // 
             // radioButtonQuinta
             // 
             this.radioButtonQuinta.AutoSize = true;
-            this.radioButtonQuinta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonQuinta.Location = new System.Drawing.Point(601, 568);
+            this.radioButtonQuinta.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonQuinta.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonQuinta.Location = new System.Drawing.Point(632, 604);
             this.radioButtonQuinta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonQuinta.Name = "radioButtonQuinta";
-            this.radioButtonQuinta.Size = new System.Drawing.Size(134, 42);
+            this.radioButtonQuinta.Size = new System.Drawing.Size(158, 37);
             this.radioButtonQuinta.TabIndex = 38;
             this.radioButtonQuinta.TabStop = true;
             this.radioButtonQuinta.Text = "Quinta";
-            this.radioButtonQuinta.UseVisualStyleBackColor = true;
+            this.radioButtonQuinta.UseVisualStyleBackColor = false;
+            this.radioButtonQuinta.CheckedChanged += new System.EventHandler(this.radioButtonQuinta_CheckedChanged);
             // 
             // radioButtonSexta
             // 
             this.radioButtonSexta.AutoSize = true;
-            this.radioButtonSexta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSexta.Location = new System.Drawing.Point(752, 568);
+            this.radioButtonSexta.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonSexta.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonSexta.Location = new System.Drawing.Point(810, 606);
             this.radioButtonSexta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSexta.Name = "radioButtonSexta";
-            this.radioButtonSexta.Size = new System.Drawing.Size(122, 42);
+            this.radioButtonSexta.Size = new System.Drawing.Size(130, 37);
             this.radioButtonSexta.TabIndex = 37;
             this.radioButtonSexta.TabStop = true;
             this.radioButtonSexta.Text = "Sexta";
-            this.radioButtonSexta.UseVisualStyleBackColor = true;
+            this.radioButtonSexta.UseVisualStyleBackColor = false;
             // 
             // radioButtonSegunda
             // 
             this.radioButtonSegunda.AutoSize = true;
-            this.radioButtonSegunda.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSegunda.Location = new System.Drawing.Point(113, 568);
+            this.radioButtonSegunda.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonSegunda.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonSegunda.Location = new System.Drawing.Point(113, 606);
             this.radioButtonSegunda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonSegunda.Name = "radioButtonSegunda";
-            this.radioButtonSegunda.Size = new System.Drawing.Size(168, 42);
+            this.radioButtonSegunda.Size = new System.Drawing.Size(182, 37);
             this.radioButtonSegunda.TabIndex = 36;
             this.radioButtonSegunda.TabStop = true;
             this.radioButtonSegunda.Text = "Segunda";
-            this.radioButtonSegunda.UseVisualStyleBackColor = true;
+            this.radioButtonSegunda.UseVisualStyleBackColor = false;
             // 
             // txtInstrumento
             // 
+            this.txtInstrumento.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstrumento.Location = new System.Drawing.Point(260, 486);
+            this.txtInstrumento.Location = new System.Drawing.Point(280, 552);
             this.txtInstrumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInstrumento.Multiline = true;
             this.txtInstrumento.Name = "txtInstrumento";
@@ -188,6 +183,7 @@
             // 
             // txtProfessor
             // 
+            this.txtProfessor.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProfessor.Location = new System.Drawing.Point(220, 667);
             this.txtProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,81 +195,92 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 486);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(30, 552);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(209, 38);
+            this.label7.Size = new System.Drawing.Size(244, 33);
             this.label7.TabIndex = 33;
             this.label7.Text = "Instrumento:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(24, 667);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 38);
+            this.label4.Size = new System.Drawing.Size(190, 33);
             this.label4.TabIndex = 32;
             this.label4.Text = "Professor:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 568);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 606);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 38);
+            this.label3.Size = new System.Drawing.Size(78, 33);
             this.label3.TabIndex = 31;
             this.label3.Text = "Dia:";
             // 
             // Voltar
             // 
-            this.Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Voltar.BackColor = System.Drawing.Color.MediumPurple;
+            this.Voltar.Font = new System.Drawing.Font("Perpetua", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Voltar.ForeColor = System.Drawing.Color.Transparent;
             this.Voltar.Location = new System.Drawing.Point(1270, 606);
             this.Voltar.Name = "Voltar";
             this.Voltar.Size = new System.Drawing.Size(230, 79);
             this.Voltar.TabIndex = 41;
             this.Voltar.Text = "Voltar";
-            this.Voltar.UseVisualStyleBackColor = true;
+            this.Voltar.UseVisualStyleBackColor = false;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
             // excluir
             // 
-            this.excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excluir.BackColor = System.Drawing.Color.MediumPurple;
+            this.excluir.Font = new System.Drawing.Font("Perpetua", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excluir.ForeColor = System.Drawing.Color.Transparent;
             this.excluir.Location = new System.Drawing.Point(1270, 511);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(230, 79);
             this.excluir.TabIndex = 43;
             this.excluir.Text = "Excluir";
-            this.excluir.UseVisualStyleBackColor = true;
+            this.excluir.UseVisualStyleBackColor = false;
             this.excluir.Click += new System.EventHandler(this.button1_Click);
             // 
             // editar
             // 
-            this.editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editar.BackColor = System.Drawing.Color.MediumPurple;
+            this.editar.Font = new System.Drawing.Font("Perpetua", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editar.ForeColor = System.Drawing.Color.Transparent;
             this.editar.Location = new System.Drawing.Point(1270, 406);
             this.editar.Name = "editar";
             this.editar.Size = new System.Drawing.Size(230, 79);
             this.editar.TabIndex = 42;
             this.editar.Text = "Editar";
-            this.editar.UseVisualStyleBackColor = true;
+            this.editar.UseVisualStyleBackColor = false;
             this.editar.Click += new System.EventHandler(this.editar_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(114, 74);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Perpetua Titling MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(43, 150);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(225, 52);
+            this.label8.Size = new System.Drawing.Size(254, 48);
             this.label8.TabIndex = 45;
             this.label8.Text = "Pesquisar";
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(346, 82);
+            this.textBox1.Location = new System.Drawing.Point(305, 150);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -284,32 +291,35 @@
             // radioButtonID
             // 
             this.radioButtonID.AutoSize = true;
-            this.radioButtonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonID.Location = new System.Drawing.Point(123, 146);
+            this.radioButtonID.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonID.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonID.Location = new System.Drawing.Point(82, 214);
             this.radioButtonID.Name = "radioButtonID";
-            this.radioButtonID.Size = new System.Drawing.Size(57, 33);
+            this.radioButtonID.Size = new System.Drawing.Size(70, 37);
             this.radioButtonID.TabIndex = 46;
             this.radioButtonID.TabStop = true;
             this.radioButtonID.Text = "ID";
-            this.radioButtonID.UseVisualStyleBackColor = true;
+            this.radioButtonID.UseVisualStyleBackColor = false;
             // 
             // radioButtonInstrumento
             // 
             this.radioButtonInstrumento.AutoSize = true;
-            this.radioButtonInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonInstrumento.Location = new System.Drawing.Point(186, 146);
+            this.radioButtonInstrumento.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonInstrumento.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonInstrumento.Location = new System.Drawing.Point(158, 214);
             this.radioButtonInstrumento.Name = "radioButtonInstrumento";
-            this.radioButtonInstrumento.Size = new System.Drawing.Size(159, 33);
+            this.radioButtonInstrumento.Size = new System.Drawing.Size(258, 37);
             this.radioButtonInstrumento.TabIndex = 48;
             this.radioButtonInstrumento.TabStop = true;
             this.radioButtonInstrumento.Text = "Instrumento";
-            this.radioButtonInstrumento.UseVisualStyleBackColor = true;
+            this.radioButtonInstrumento.UseVisualStyleBackColor = false;
             // 
             // textBoxID
             // 
+            this.textBoxID.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.textBoxID.Enabled = false;
             this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(97, 415);
+            this.textBoxID.Location = new System.Drawing.Point(97, 502);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxID.Multiline = true;
             this.textBoxID.Name = "textBoxID";
@@ -320,10 +330,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 415);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 502);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 38);
+            this.label1.Size = new System.Drawing.Size(56, 33);
             this.label1.TabIndex = 49;
             this.label1.Text = "ID:";
             // 
@@ -331,6 +342,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BackgroundImage = global::LeonardoMiguelTrindade_EscoladeMusica.Properties.Resources.The_Art_Of_3_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1556, 720);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label1);
@@ -351,7 +365,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ConsultarAula";
@@ -364,8 +377,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RadioButton radioButtonTerca;
         private System.Windows.Forms.RadioButton radioButtonQuarta;

@@ -221,5 +221,10 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                 MessageBox.Show("Selecione um aluno para editar.");
             }
         }
+
+        private void radioButtonQuinta_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

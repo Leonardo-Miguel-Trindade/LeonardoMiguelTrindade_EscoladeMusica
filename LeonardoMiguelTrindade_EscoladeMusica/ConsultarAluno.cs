@@ -200,5 +200,15 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         {
             editarAluno();
         }
+
+        private void radioButtonNome_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
