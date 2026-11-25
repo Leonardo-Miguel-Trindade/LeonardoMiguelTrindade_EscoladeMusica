@@ -52,7 +52,7 @@
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 189);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 41);
+            this.label2.Size = new System.Drawing.Size(242, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "Matrícula:";
             // 
@@ -63,7 +63,7 @@
             this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 259);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 41);
+            this.label3.Size = new System.Drawing.Size(132, 39);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nome:";
             // 
@@ -74,7 +74,7 @@
             this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 330);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 41);
+            this.label4.Size = new System.Drawing.Size(216, 39);
             this.label4.TabIndex = 3;
             this.label4.Text = "Endereço:";
             // 
@@ -85,7 +85,7 @@
             this.label5.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 401);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 41);
+            this.label5.Size = new System.Drawing.Size(89, 39);
             this.label5.TabIndex = 4;
             this.label5.Text = "CPF:";
             // 
@@ -96,7 +96,7 @@
             this.label6.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 464);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(206, 41);
+            this.label6.Size = new System.Drawing.Size(200, 39);
             this.label6.TabIndex = 5;
             this.label6.Text = "Telefone:";
             // 
@@ -107,7 +107,7 @@
             this.label7.Font = new System.Drawing.Font("Perpetua Titling MT", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 522);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(296, 41);
+            this.label7.Size = new System.Drawing.Size(290, 39);
             this.label7.TabIndex = 6;
             this.label7.Text = "Instrumento:";
             // 
@@ -115,7 +115,8 @@
             // 
             this.txtMatricula.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatricula.Location = new System.Drawing.Point(267, 191);
+            this.txtMatricula.ForeColor = System.Drawing.Color.White;
+            this.txtMatricula.Location = new System.Drawing.Point(282, 189);
             this.txtMatricula.Multiline = true;
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(470, 39);
@@ -125,7 +126,8 @@
             // 
             this.txtNome.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(143, 261);
+            this.txtNome.ForeColor = System.Drawing.Color.White;
+            this.txtNome.Location = new System.Drawing.Point(159, 259);
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(470, 39);
@@ -135,7 +137,8 @@
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(236, 330);
+            this.txtEndereco.ForeColor = System.Drawing.Color.White;
+            this.txtEndereco.Location = new System.Drawing.Point(248, 330);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(470, 39);
@@ -145,7 +148,8 @@
             // 
             this.txtCPF.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(109, 399);
+            this.txtCPF.ForeColor = System.Drawing.Color.White;
+            this.txtCPF.Location = new System.Drawing.Point(120, 401);
             this.txtCPF.Multiline = true;
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(470, 39);
@@ -155,7 +159,8 @@
             // 
             this.txtTelefone.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(213, 464);
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
+            this.txtTelefone.Location = new System.Drawing.Point(238, 464);
             this.txtTelefone.Multiline = true;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(470, 39);
@@ -165,7 +170,8 @@
             // 
             this.txtInstrumento.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstrumento.Location = new System.Drawing.Point(304, 522);
+            this.txtInstrumento.ForeColor = System.Drawing.Color.White;
+            this.txtInstrumento.Location = new System.Drawing.Point(327, 522);
             this.txtInstrumento.Multiline = true;
             this.txtInstrumento.Name = "txtInstrumento";
             this.txtInstrumento.Size = new System.Drawing.Size(470, 39);
@@ -173,12 +179,12 @@
             // 
             // cadastrar
             // 
-            this.cadastrar.BackColor = System.Drawing.Color.MediumPurple;
+            this.cadastrar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.cadastrar.Font = new System.Drawing.Font("Perpetua", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastrar.ForeColor = System.Drawing.Color.White;
             this.cadastrar.Location = new System.Drawing.Point(544, 607);
             this.cadastrar.Name = "cadastrar";
-            this.cadastrar.Size = new System.Drawing.Size(230, 79);
+            this.cadastrar.Size = new System.Drawing.Size(259, 79);
             this.cadastrar.TabIndex = 13;
             this.cadastrar.Text = "Cadastrar";
             this.cadastrar.UseVisualStyleBackColor = false;
@@ -186,7 +192,7 @@
             // 
             // voltar
             // 
-            this.voltar.BackColor = System.Drawing.Color.MediumPurple;
+            this.voltar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.voltar.Font = new System.Drawing.Font("Perpetua", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voltar.ForeColor = System.Drawing.Color.White;
             this.voltar.Location = new System.Drawing.Point(19, 607);
@@ -199,12 +205,12 @@
             // 
             // consultar
             // 
-            this.consultar.BackColor = System.Drawing.Color.MediumPurple;
+            this.consultar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.consultar.Font = new System.Drawing.Font("Perpetua", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultar.ForeColor = System.Drawing.Color.White;
-            this.consultar.Location = new System.Drawing.Point(282, 607);
+            this.consultar.Location = new System.Drawing.Point(265, 607);
             this.consultar.Name = "consultar";
-            this.consultar.Size = new System.Drawing.Size(230, 79);
+            this.consultar.Size = new System.Drawing.Size(256, 79);
             this.consultar.TabIndex = 15;
             this.consultar.Text = "Consultar";
             this.consultar.UseVisualStyleBackColor = false;

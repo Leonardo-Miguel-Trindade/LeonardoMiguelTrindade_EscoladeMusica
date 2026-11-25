@@ -24,7 +24,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         public void CarregarDados()
         {
-            FormatarDG();
+            FormatarDGau();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = Conexao.listarDados("SELECT * FROM aulas");
         }
@@ -41,45 +41,60 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             form.Show();
         }
 
-        public void FormatarDG()
+        public void FormatarDGau()
         {
             dataGridView1.Columns["ID"].DataPropertyName = "id";
             dataGridView1.Columns["Instrumento"].DataPropertyName = "instrumento";
             dataGridView1.Columns["Professor"].DataPropertyName = "professor";
             dataGridView1.Columns["Dia"].DataPropertyName = "dia";
-            //cores da tabela 
-            dataGridView1.ForeColor = System.Drawing.Color.White;
+            // Paleta do background
+            Color roxoEscuro = ColorTranslator.FromHtml("#3F2A5C");
+            Color roxoMedio = ColorTranslator.FromHtml("#6B5A8E");
+            Color lilas = ColorTranslator.FromHtml("#B57FD6");
+            Color creme = ColorTranslator.FromHtml("#FDF3DC");
+
+            // Ligação das colunas (confira se os nomes batem com o Name de cada coluna)
+            dataGridView1.Columns["ID"].DataPropertyName = "id";
+            dataGridView1.Columns["Instrumento"].DataPropertyName = "instrumento";
+            dataGridView1.Columns["Professor"].DataPropertyName = "professor";
+            dataGridView1.Columns["Dia"].DataPropertyName = "dia";
+
+            // Aparência geral do grid
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.BackgroundColor = creme;
+            dataGridView1.GridColor = lilas;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.RowHeadersVisible = false;      // remove a coluna cinza da esquerda
+            dataGridView1.AllowUserToAddRows = false;     // remove a linha em branco do final
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            // Colunas ocupam toda a largura do grid (centralizado e proporcional)
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Cabeçalho
             dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Coral;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Coral;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = roxoEscuro;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = creme;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = roxoEscuro; // evita mudar de cor ao clicar
 
-            //alinhamento das colunas
-            dataGridView1.Columns["ID"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["Instrumento"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["Professor"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["Dia"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            // Linhas
+            dataGridView1.RowTemplate.Height = 32;
+            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.DefaultCellStyle.ForeColor = roxoEscuro;
+            dataGridView1.DefaultCellStyle.BackColor = creme;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 220, 245); // lilás bem claro
+            dataGridView1.AlternatingRowsDefaultCellStyle.ForeColor = roxoEscuro;
 
-            //alinhamento dos dados
-            dataGridView1.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["Instrumento"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["Professor"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["Dia"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //Tamanho padrão das colunas
-            dataGridView1.Columns["ID"].Width = 200;
-            dataGridView1.Columns["Instrumento"].Width = 200;
-            dataGridView1.Columns["Professor"].Width = 200;
-            dataGridView1.Columns["Dia"].Width = 200;
-
-            //Muda tipo da fonta, tamanhos e deixa o texto em negrito
-            dataGridView1.Columns["Instrumento"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["Professor"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["Dia"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-
-            //mudar acor da linha na tabela
-            dataGridView1.RowsDefaultCellStyle.BackColor = Color.Coral;
-
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkRed;
+            // Linha selecionada (importante porque você usa o clique para preencher os campos)
+            dataGridView1.DefaultCellStyle.SelectionBackColor = roxoMedio;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = creme;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -103,7 +118,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             //executando o banco
             try
             {
-                FormatarDG();
+                FormatarDGau();
                 Conexao.GetConexao("server=localhost;user id=root;password=;database=escola_de_musica");
                 dataGridView1.DataSource = Conexao.listarDados(sql);
             }

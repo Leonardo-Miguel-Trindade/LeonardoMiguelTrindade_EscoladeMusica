@@ -19,16 +19,24 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         private void cadastrar_Click(object sender, EventArgs e)
         {
-            var matricula = int.Parse(txtMatricula.Text);
-            var nome = txtNome.Text;
-            var endereco = txtEndereco.Text;
-            var cpf = txtCPF.Text;
-            var telefone = txtTelefone.Text;
-            var instrumento = txtInstrumento.Text;
+            if (string.IsNullOrWhiteSpace(txtMatricula.Text) || string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtEndereco.Text) || string.IsNullOrWhiteSpace(txtCPF.Text) || string.IsNullOrWhiteSpace(txtTelefone.Text) || string.IsNullOrWhiteSpace(txtInstrumento.Text))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos.");
+                return;
+            }
+            else
+            {
+                var matricula = int.Parse(txtMatricula.Text);
+                var nome = txtNome.Text;
+                var endereco = txtEndereco.Text;
+                var cpf = txtCPF.Text;
+                var telefone = txtTelefone.Text;
+                var instrumento = txtInstrumento.Text;
 
-            Conexao.CadastroAluno(matricula, nome, endereco, cpf, telefone, instrumento);
+                Conexao.CadastroAluno(matricula, nome, endereco, cpf, telefone, instrumento);
 
-            limpar();
+                limpar();
+            }
         }
 
         private void limpar()

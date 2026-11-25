@@ -26,19 +26,27 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
 
         private void cadastrar_Click(object sender, EventArgs e)
         {
-            var instrumento = txtInstrumento.Text;
-            var professor = txtProfessor.Text; 
-            String dia;
+            if (string.IsNullOrWhiteSpace(txtInstrumento.Text) || string.IsNullOrWhiteSpace(txtProfessor.Text) || (!radioButtonSegunda.Checked && !radioButtonTerca.Checked && !radioButtonQuarta.Checked && !radioButtonQuinta.Checked && !radioButtonSexta.Checked))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos.");
+                return;
+            }
+            else
+            {
+                var instrumento = txtInstrumento.Text;
+                var professor = txtProfessor.Text;
+                String dia;
 
-            if (radioButtonSegunda.Checked) dia = "SEGUNDA";
-            else if (radioButtonTerca.Checked) dia = "TERÇA";
-            else if (radioButtonQuarta.Checked) dia = "QUARTA";
-            else if (radioButtonQuinta.Checked) dia = "QUINTA";
-            else dia = "SEXTA";
+                if (radioButtonSegunda.Checked) dia = "SEGUNDA";
+                else if (radioButtonTerca.Checked) dia = "TERÇA";
+                else if (radioButtonQuarta.Checked) dia = "QUARTA";
+                else if (radioButtonQuinta.Checked) dia = "QUINTA";
+                else dia = "SEXTA";
 
-            Conexao.CadastroAula(instrumento, dia, professor);
+                Conexao.CadastroAula(instrumento, dia, professor);
 
-            limpar();
+                limpar();
+            }
         }
 
         private void limpar()

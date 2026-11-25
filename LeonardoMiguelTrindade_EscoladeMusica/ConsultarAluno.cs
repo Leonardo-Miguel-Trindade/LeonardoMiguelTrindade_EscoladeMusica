@@ -21,10 +21,10 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             InitializeComponent();
             FormatarDG();
             dataGridView1.AutoGenerateColumns = false;
-            CarregarDados();
+            CarregarDadosAl();
         }
 
-        public void CarregarDados()
+        public void CarregarDadosAl()
         {
             dataGridView1.DataSource = Conexao.listarDados("SELECT * FROM alunos");
         }
@@ -55,48 +55,63 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
             dataGridView1.Columns["TELEFONE"].DataPropertyName = "telefone";
             dataGridView1.Columns["INSTRUMENTO"].DataPropertyName = "instrumento";
 
-            //cores da tabela 
-            dataGridView1.ForeColor = System.Drawing.Color.White;
+            // Mesma paleta da tela de aulas
+            Color roxoEscuro = ColorTranslator.FromHtml("#3F2A5C");
+            Color roxoMedio = ColorTranslator.FromHtml("#6B5A8E");
+            Color lilas = ColorTranslator.FromHtml("#B57FD6");
+            Color creme = ColorTranslator.FromHtml("#FDF3DC");
+            Color lilasClaro = Color.FromArgb(235, 220, 245);
+
+            // Ligação das colunas
+            dataGridView1.Columns["MATRICULA"].DataPropertyName = "matricula";
+            dataGridView1.Columns["NOME"].DataPropertyName = "nome";
+            dataGridView1.Columns["ENDERECO"].DataPropertyName = "endereco";
+            dataGridView1.Columns["CPF"].DataPropertyName = "cpf";
+            dataGridView1.Columns["TELEFONE"].DataPropertyName = "telefone";
+            dataGridView1.Columns["INSTRUMENTO"].DataPropertyName = "instrumento";
+
+            // Aparência geral
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.BackgroundColor = creme;
+            dataGridView1.GridColor = lilas;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            // Colunas dividem a largura do grid
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.Columns["MATRICULA"].FillWeight = 80;
+            dataGridView1.Columns["NOME"].FillWeight = 130;
+            dataGridView1.Columns["ENDERECO"].FillWeight = 125;
+            dataGridView1.Columns["CPF"].FillWeight = 90;
+            dataGridView1.Columns["TELEFONE"].FillWeight = 90;
+            dataGridView1.Columns["INSTRUMENTO"].FillWeight = 100;
+
+            // Cabeçalho
             dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Coral;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Coral;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = roxoEscuro;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = creme;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = roxoEscuro;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11, FontStyle.Bold);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            //alinhamento das colunas
-            dataGridView1.Columns["MATRICULA"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["NOME"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["ENDERECO"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["CPF"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["TELEFONE"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["INSTRUMENTO"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            // Linhas
+            dataGridView1.RowTemplate.Height = 32;
+            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.DefaultCellStyle.ForeColor = roxoEscuro;
+            dataGridView1.DefaultCellStyle.BackColor = creme;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = lilasClaro;
+            dataGridView1.AlternatingRowsDefaultCellStyle.ForeColor = roxoEscuro;
 
-            //alinhamento dos dados
-            dataGridView1.Columns["MATRICULA"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["NOME"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["ENDERECO"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["CPF"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["TELEFONE"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["INSTRUMENTO"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //Tamanho padrão das colunas
-            dataGridView1.Columns["MATRICULA"].Width = 200;
-            dataGridView1.Columns["NOME"].Width = 200;
-            dataGridView1.Columns["ENDERECO"].Width = 200;
-            dataGridView1.Columns["CPF"].Width = 200;
-            dataGridView1.Columns["TELEFONE"].Width = 200;
-            dataGridView1.Columns["INSTRUMENTO"].Width = 200;
-
-            //Muda tipo da fonta, tamanhos e deixa o texto em negrito
-            dataGridView1.Columns["MATRICULA"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["NOME"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["ENDERECO"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["CPF"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["TELEFONE"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-            dataGridView1.Columns["INSTRUMENTO"].DefaultCellStyle.Font = new Font("arial", 10, FontStyle.Bold);
-
-            //mudar acor da linha na tabela
-            dataGridView1.RowsDefaultCellStyle.BackColor = Color.Coral;
-
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkRed;
+            // Linha selecionada
+            dataGridView1.DefaultCellStyle.SelectionBackColor = roxoMedio;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = creme;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -142,7 +157,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
         private void button1_Click(object sender, EventArgs e)
         {
             Conexao.ExcluirAluno("DELETE FROM alunos WHERE matricula = " + txtMatricula.Text);
-            CarregarDados();
+            CarregarDadosAl();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -174,7 +189,7 @@ namespace LeonardoMiguelTrindade_EscoladeMusica
                         
                         command.ExecuteNonQuery();
 
-                        CarregarDados();
+                        CarregarDadosAl();
 
                         MessageBox.Show("Aluno editado com sucesso!");
                     }

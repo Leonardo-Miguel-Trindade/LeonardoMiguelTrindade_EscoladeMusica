@@ -119,7 +119,8 @@
             // 
             this.txtInstrumento.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInstrumento.Location = new System.Drawing.Point(342, 804);
+            this.txtInstrumento.ForeColor = System.Drawing.Color.White;
+            this.txtInstrumento.Location = new System.Drawing.Point(365, 806);
             this.txtInstrumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInstrumento.Multiline = true;
             this.txtInstrumento.Name = "txtInstrumento";
@@ -130,7 +131,8 @@
             // 
             this.txtTelefone.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(251, 762);
+            this.txtTelefone.ForeColor = System.Drawing.Color.White;
+            this.txtTelefone.Location = new System.Drawing.Point(275, 760);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefone.Multiline = true;
             this.txtTelefone.Name = "txtTelefone";
@@ -142,7 +144,8 @@
             // 
             this.txtCPF.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(125, 714);
+            this.txtCPF.ForeColor = System.Drawing.Color.White;
+            this.txtCPF.Location = new System.Drawing.Point(147, 714);
             this.txtCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCPF.Multiline = true;
             this.txtCPF.Name = "txtCPF";
@@ -153,7 +156,8 @@
             // 
             this.txtEndereco.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(275, 652);
+            this.txtEndereco.ForeColor = System.Drawing.Color.White;
+            this.txtEndereco.Location = new System.Drawing.Point(288, 658);
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEndereco.Multiline = true;
             this.txtEndereco.Name = "txtEndereco";
@@ -164,6 +168,7 @@
             // 
             this.txtNome.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.White;
             this.txtNome.Location = new System.Drawing.Point(184, 601);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Multiline = true;
@@ -173,10 +178,11 @@
             // 
             // txtMatricula
             // 
-            this.txtMatricula.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtMatricula.BackColor = System.Drawing.Color.White;
             this.txtMatricula.Enabled = false;
             this.txtMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatricula.Location = new System.Drawing.Point(306, 538);
+            this.txtMatricula.ForeColor = System.Drawing.Color.White;
+            this.txtMatricula.Location = new System.Drawing.Point(317, 540);
             this.txtMatricula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatricula.Multiline = true;
             this.txtMatricula.Name = "txtMatricula";
@@ -266,6 +272,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(288, 193);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;

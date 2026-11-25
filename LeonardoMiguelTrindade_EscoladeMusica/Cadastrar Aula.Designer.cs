@@ -47,6 +47,7 @@
             // 
             this.txtInstrumento.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInstrumento.ForeColor = System.Drawing.Color.White;
             this.txtInstrumento.Location = new System.Drawing.Point(285, 218);
             this.txtInstrumento.Multiline = true;
             this.txtInstrumento.Name = "txtInstrumento";
@@ -57,6 +58,7 @@
             // 
             this.txtProfessor.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProfessor.ForeColor = System.Drawing.Color.White;
             this.txtProfessor.Location = new System.Drawing.Point(241, 386);
             this.txtProfessor.Multiline = true;
             this.txtProfessor.Name = "txtProfessor";
@@ -163,10 +165,10 @@
             // 
             // cadastrar
             // 
-            this.cadastrar.BackColor = System.Drawing.Color.MediumPurple;
+            this.cadastrar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.cadastrar.Font = new System.Drawing.Font("Perpetua", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadastrar.ForeColor = System.Drawing.Color.White;
-            this.cadastrar.Location = new System.Drawing.Point(555, 613);
+            this.cadastrar.Location = new System.Drawing.Point(555, 492);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(259, 74);
             this.cadastrar.TabIndex = 31;
@@ -176,10 +178,10 @@
             // 
             // voltar
             // 
-            this.voltar.BackColor = System.Drawing.Color.MediumPurple;
+            this.voltar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.voltar.Font = new System.Drawing.Font("Perpetua", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voltar.ForeColor = System.Drawing.Color.White;
-            this.voltar.Location = new System.Drawing.Point(14, 613);
+            this.voltar.Location = new System.Drawing.Point(14, 492);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(259, 74);
             this.voltar.TabIndex = 32;
@@ -189,10 +191,10 @@
             // 
             // consultar
             // 
-            this.consultar.BackColor = System.Drawing.Color.MediumPurple;
+            this.consultar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.consultar.Font = new System.Drawing.Font("Perpetua", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultar.ForeColor = System.Drawing.Color.White;
-            this.consultar.Location = new System.Drawing.Point(285, 613);
+            this.consultar.Location = new System.Drawing.Point(285, 492);
             this.consultar.Name = "consultar";
             this.consultar.Size = new System.Drawing.Size(259, 74);
             this.consultar.TabIndex = 33;
@@ -206,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LeonardoMiguelTrindade_EscoladeMusica.Properties.Resources.The_Art_Of_2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1460, 698);
+            this.ClientSize = new System.Drawing.Size(1287, 632);
             this.Controls.Add(this.consultar);
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.cadastrar);

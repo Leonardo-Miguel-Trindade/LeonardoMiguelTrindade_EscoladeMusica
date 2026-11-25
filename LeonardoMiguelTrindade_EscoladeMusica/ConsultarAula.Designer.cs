@@ -174,6 +174,7 @@
             // 
             this.txtInstrumento.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtInstrumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInstrumento.ForeColor = System.Drawing.Color.White;
             this.txtInstrumento.Location = new System.Drawing.Point(280, 552);
             this.txtInstrumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInstrumento.Multiline = true;
@@ -185,6 +186,7 @@
             // 
             this.txtProfessor.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProfessor.ForeColor = System.Drawing.Color.White;
             this.txtProfessor.Location = new System.Drawing.Point(220, 667);
             this.txtProfessor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProfessor.Multiline = true;
@@ -280,6 +282,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(305, 150);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
@@ -316,9 +319,10 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.textBoxID.BackColor = System.Drawing.Color.White;
             this.textBoxID.Enabled = false;
             this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.ForeColor = System.Drawing.Color.White;
             this.textBoxID.Location = new System.Drawing.Point(97, 502);
             this.textBoxID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxID.Multiline = true;
